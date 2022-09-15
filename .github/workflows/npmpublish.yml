@@ -19,6 +19,7 @@ jobs:
       - run: npm install -g yarn
       - run: yarn install
       - run: npx webpack
-      - run: npm publish --access=public --registry=https://github.com/imec-int/jsonld-context-parser.js
+      - run: echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
