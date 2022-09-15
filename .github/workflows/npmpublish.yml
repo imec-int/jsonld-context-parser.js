@@ -19,6 +19,6 @@ jobs:
       - run: npm install -g yarn
       - run: yarn install
       - run: npx webpack
-      - run: npm publish --access=public
+      - run: npm publish --access=public --registry=https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
