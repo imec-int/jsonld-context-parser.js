@@ -29,7 +29,6 @@
   ],
   "pre-commit": [
     "build",
-    "lint",
     "test"
   ],
   "bin": {
